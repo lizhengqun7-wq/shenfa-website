@@ -1,0 +1,612 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>15級試煉[法師]"下" - 神罰天堂</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      margin: 0;
+      background: #000;
+      color: #d8d8d8;
+      font-family: 'Microsoft JhengHei', 'Noto Serif TC', sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .layout {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 252px minmax(0, 1fr);
+      background: #000;
+    }
+    .sidebar {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 56px 24px 28px 40px;
+      background: #202020;
+      border-right: 1px solid #343434;
+      overflow-y: auto;
+    }
+    .server-logo {
+      margin: 0 0 66px 8px;
+      font-size: 26px;
+      line-height: 1.15;
+      font-weight: 900;
+      color: #d8d8d8;
+      text-shadow: 1px 1px 0 #111, 0 0 8px rgba(255, 255, 255, 0.18);
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+    .side-menu {
+      display: grid;
+      gap: 18px;
+    }
+    .side-menu a,
+    .side-menu button {
+      display: flex;
+      align-items: center;
+      width: auto;
+      min-height: 24px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #d8d8d8;
+      font: inherit;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.25;
+      text-align: left;
+      cursor: pointer;
+      text-shadow: 1px 1px 0 #111;
+    }
+    .side-menu a:hover,
+    .side-menu button:hover { color: #eeeeee; }
+    .menu-group {
+      display: grid;
+      gap: 14px;
+      position: relative;
+    }
+    
+    .submenu {
+      display: grid;
+      gap: 18px;
+      padding-left: 0;
+    }
+    .content {
+      min-width: 0;
+      background: #000;
+    }
+    .top-name {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      padding: 0 34px;
+      background: #000;
+      color: #d8d8d8;
+      font-size: clamp(24px, 2.2vw, 40px);
+      font-weight: 900;
+      text-shadow: 1px 1px 0 #111, 0 0 8px rgba(255, 255, 255, 0.16);
+      letter-spacing: 0;
+    }
+    .hero {
+      min-height: clamp(280px, 45vw, 620px);
+      background: url('img/hero.png') center top / cover no-repeat;
+      border-bottom: 1px solid #111;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(180px, 1fr));
+      gap: clamp(28px, 4vw, 58px) clamp(22px, 3.8vw, 52px);
+      padding: clamp(34px, 4vw, 62px) clamp(28px, 4vw, 64px) 80px;
+      background: #000;
+    }
+    .intro-card {
+      display: block;
+      text-align: center;
+    }
+    .intro-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      display: block;
+      background: linear-gradient(rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.18)), url('img/lineage.png') center / cover no-repeat;
+      border: 1px solid #080808;
+      filter: saturate(1.06) contrast(1.05);
+    }
+    .intro-card:nth-child(3) .intro-image { background-position: 35% center; }
+    .intro-card:nth-child(4) .intro-image { background-position: 65% center; }
+    .intro-card:nth-child(5) .intro-image { background-position: 20% center; }
+    .intro-card:nth-child(6) .intro-image { background-position: 80% center; }
+    .intro-card:nth-child(7) .intro-image { background-position: center 35%; }
+    .intro-card:nth-child(8) .intro-image { background-position: center 70%; }
+    .intro-title {
+      display: inline-block;
+      margin-top: 16px;
+      color: #d8d8d8;
+      font-size: clamp(22px, 1.9vw, 34px);
+      font-weight: 900;
+      line-height: 1.15;
+      text-shadow: 1px 1px 0 #111, 0 0 8px rgba(255, 255, 255, 0.16);
+      white-space: nowrap;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 210px minmax(0, 1fr); }
+      .sidebar { padding-left: 30px; }
+      .card-grid { grid-template-columns: repeat(2, minmax(160px, 1fr)); }
+    }
+    @media (max-width: 680px) {
+      .layout { display: block; }
+      .sidebar {
+        position: relative;
+        height: auto;
+        padding: 26px 24px;
+      }
+      .server-logo { margin-bottom: 28px; }
+      .side-menu { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 20px; }
+      .submenu { gap: 14px; }
+      .top-name { height: 54px; padding: 0 22px; }
+      .hero { min-height: 320px; }
+      .card-grid { grid-template-columns: 1fr; padding: 28px 24px 54px; }
+    }
+      .detail-page {
+      min-height: calc(100vh - 64px);
+      padding: clamp(42px, 5vw, 86px);
+      background: #000;
+    }
+    .detail-panel {
+      max-width: 1100px;
+      min-height: 420px;
+      padding: clamp(28px, 3vw, 54px);
+      border: 1px solid #242424;
+      background: #050505;
+    }
+    .detail-panel h2 {
+      margin: 0 0 20px;
+      color: #d8d8d8;
+      font-size: clamp(34px, 3vw, 56px);
+      line-height: 1.15;
+      text-shadow: 1px 1px 0 #111, 0 0 8px rgba(255, 255, 255, 0.16);
+    }
+    .detail-panel p {
+      margin: 0;
+      color: #bdbdbd;
+      font-size: clamp(18px, 1.35vw, 26px);
+      line-height: 1.8;
+      font-weight: 700;
+    }    .class-submenu {
+      padding-left: 18px;
+    }    .menu-toggle {
+      display: flex;
+      align-items: center;
+      width: auto;
+      min-height: 24px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #d8d8d8;
+      font: inherit;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.25;
+      text-align: left;
+      cursor: pointer;
+      text-shadow: 1px 1px 0 #111;
+    }
+    .menu-toggle::before {
+      content: "▶";
+      display: inline-block;
+      width: 18px;
+      margin-left: -18px;
+      color: #d8d8d8;
+      font-size: 12px;
+      line-height: 1;
+    }
+    .menu-group.is-open > .menu-toggle::before {
+      content: "▼";
+      font-size: 12px;
+    }
+    .menu-toggle:hover { color: #eeeeee; }
+    .menu-group:not(.is-open) > .submenu {
+      display: none;
+    }
+    .magic-book-subMenu {
+      padding-left: 16px;
+    }
+    .submenu .menu-group {
+      gap: 12px;
+    }
+    .submenu .menu-toggle {
+      font-size: 16px;
+    }
+    .magic-crystal-subMenu {
+      padding-left: 16px;
+    }    .trial-royal-subMenu,
+    .trial-knight-subMenu,
+    .trial-elf-subMenu,
+    .trial-wizard-subMenu {
+      padding-left: 16px;
+    }    .menu-toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      min-height: 24px;
+    }
+    .menu-toggle-row .menu-toggle {
+      position: absolute;
+      left: -18px;
+      width: 18px;
+      min-height: 24px;
+      justify-content: center;
+    }
+    .menu-toggle-row .menu-toggle::before {
+      margin-left: 0;
+      width: auto;
+    }
+    .menu-toggle-row .menu-link {
+      flex: 1 1 auto;
+    }
+    /* menu-polish: left navigation hierarchy */
+    .side-menu {
+      gap: 16px;
+    }
+    .side-menu > a,
+    .side-menu > .menu-group > .menu-toggle-row {
+      min-height: 26px;
+    }
+    .menu-group {
+      gap: 10px;
+    }
+    .menu-toggle-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      min-height: 26px;
+    }
+    .menu-toggle-row .menu-link {
+      flex: 1 1 auto;
+    }
+    .menu-toggle-row .menu-toggle {
+      position: absolute;
+      left: -18px;
+      width: 18px;
+      min-height: 26px;
+      display: grid;
+      place-items: center;
+    }
+    .menu-toggle::before {
+      content: "▸";
+      width: auto;
+      margin-left: 0;
+      color: #f0f0f0;
+      font-size: 12px;
+      line-height: 1;
+      transform: translateY(1px);
+    }
+    .menu-group.is-open > .menu-toggle::before,
+    .menu-group.is-open > .menu-toggle-row > .menu-toggle::before {
+      content: "▾";
+      font-size: 13px;
+      transform: translateY(0);
+    }
+    .submenu {
+      display: grid;
+      gap: 16px;
+      padding-left: 26px;
+      margin-top: 4px;
+    }
+    .submenu .submenu {
+      gap: 14px;
+      padding-left: 30px;
+      margin-top: 2px;
+    }
+    .submenu .submenu .submenu {
+      padding-left: 34px;
+    }
+    .submenu a,
+    .submenu .menu-link {
+      font-size: 15px;
+      font-weight: 900;
+    }
+    .submenu .submenu a,
+    .submenu .submenu .menu-link {
+      font-size: 14px;
+      color: #eeeeee;
+    }
+    .submenu .menu-group {
+      gap: 10px;
+    }
+    .submenu .menu-toggle-row {
+      min-height: 24px;
+    }
+    .submenu .menu-toggle-row .menu-toggle {
+      left: -18px;
+      min-height: 24px;
+    }
+    .menu-group:not(.is-open) > .submenu {
+      display: none;
+    }
+    /* menu-arrow-boost */
+    .menu-toggle::before {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 900;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 1px 1px 0 #000;
+    }
+    .menu-group.is-open > .menu-toggle::before,
+    .menu-group.is-open > .menu-toggle-row > .menu-toggle::before {
+      color: #ffffff;
+      font-size: 17px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 1px 1px 0 #000;
+    }
+    .menu-toggle-row .menu-toggle {
+      width: 22px;
+      left: -24px;
+    }
+    /* hero-image-fit */
+    .hero {
+      min-height: 0 !important;
+      background: none !important;
+      border-bottom: 1px solid #111;
+    }
+    .hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* full-right-layout: match homepage full-width content area */
+    .detail-page {
+      padding: clamp(34px, 4vw, 62px) clamp(28px, 4vw, 64px) 80px !important;
+      background: #000 !important;
+    }
+    .detail-panel {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      background: #000 !important;
+    }
+    .class-profile {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+    }
+    /* trial-page-image: image inside each trial detail card */
+    .trial-detail-image {
+      width: 100%;
+      max-height: none;
+      object-fit: contain;
+      display: block;
+      margin: 0 0 26px;
+      background: #000;
+      border: 1px solid #242424;
+    }
+    /* trial-title-style: match weapon heading */
+    .detail-panel h2 {
+      color: #39ff14 !important;
+      text-align: center;
+      font-size: clamp(42px, 4vw, 76px);
+      text-shadow: 0 0 10px rgba(57, 255, 20, 0.28);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* trial-copy-style: centered walkthrough text under image */
+    .trial-copy {
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+      color: #d8d8d8;
+      font-weight: 800;
+    }
+    .trial-copy h3 {
+      margin: 10px 0 28px;
+      color: #ffc8d8;
+      font-size: clamp(32px, 3vw, 54px);
+      line-height: 1.15;
+      text-shadow: 0 0 10px rgba(255, 200, 216, 0.24), 1px 1px 0 #000;
+    }
+    .trial-copy .trial-subtitle {
+      margin: 0 0 24px;
+      color: #f1f1f1;
+      font-size: clamp(24px, 2.1vw, 40px);
+      line-height: 1.35;
+      text-shadow: 1px 1px 0 #000;
+    }
+    .trial-copy p {
+      margin: 0 0 18px;
+      font-size: clamp(18px, 1.45vw, 26px);
+      line-height: 1.9;
+      text-shadow: 1px 1px 0 #000;
+    }
+    .trial-copy .note-title {
+      margin-top: 32px;
+      color: #ffc8d8;
+      font-size: clamp(22px, 1.8vw, 34px);
+    }
+</style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1 class="server-logo">神罰天堂</h1>
+      <nav class="side-menu" aria-label="介紹選單">
+        <a href="index.html">神罰天堂</a>
+        <a href="idea.html">經營理念</a>
+        <a href="account.html">帳號申請</a>
+        <a href="download.html">下載區</a>
+        <a href="server.html">伺服器設定</a>
+        <div class="menu-group class-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開職業介紹"></button><a class="menu-link" href="class.html">職業介紹</a></div><div class="submenu class-submenu">
+            <a href="royal.html">王族</a>
+            <a href="knight.html">騎士</a>
+            <a href="elf.html">妖精</a>
+            <a href="wizard.html">法師</a>
+          </div>
+        </div>
+        <div class="menu-group weapon-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開武器介紹"></button><a class="menu-link" href="weapon.html">武器介紹</a></div><div class="submenu weapon-subMenu">
+            <a href="weapon-dagger.html">匕首</a>
+            <a href="weapon-bow.html">弓箭</a>
+            <a href="weapon-spear.html">長矛</a>
+            <a href="weapon-staff.html">魔杖</a>
+            <a href="weapon-axe.html">斧頭</a>
+            <a href="weapon-onehand-sword.html">單手劍</a>
+            <a href="weapon-twohand-sword.html">雙手劍</a>
+          </div>
+        </div>
+        <div class="menu-group armor-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開防具介紹"></button><a class="menu-link" href="armor.html">防具介紹</a></div><div class="submenu armor-subMenu">
+            <a href="armor-helmet.html">頭飾</a>
+            <a href="armor-underwear.html">內衣</a>
+            <a href="armor-plate.html">盔甲</a>
+            <a href="armor-cloak.html">斗篷</a>
+            <a href="armor-gloves.html">手套</a>
+            <a href="armor-shield.html">盾牌</a>
+            <a href="armor-boots.html">長靴</a>
+            <a href="armor-necklace.html">項鍊</a>
+            <a href="armor-earring.html">耳環</a>
+            <a href="armor-belt.html">腰帶</a>
+            <a href="armor-ring.html">戒指</a>
+          </div>
+        </div>
+        <div class="menu-group item-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開道具介紹"></button><a class="menu-link" href="item.html">道具介紹</a></div><div class="submenu item-subMenu">
+            <a href="item-potion.html">藥水</a>
+            <a href="item-scroll.html">卷軸</a>
+          </div>
+        </div>
+        <div class="menu-group magic-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開魔法介紹"></button><a class="menu-link" href="magic.html">魔法介紹</a></div><div class="submenu magic-subMenu">
+            <div class="menu-group magic-book-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開魔法書"></button><a class="menu-link" href="magic-book.html">魔法書</a></div><div class="submenu magic-book-subMenu">
+                <a href="magic-level-1.html">一級魔法</a>
+                <a href="magic-level-2.html">二級魔法</a>
+                <a href="magic-level-3.html">三級魔法</a>
+                <a href="magic-level-4.html">四級魔法</a>
+                <a href="magic-level-5.html">五級魔法</a>
+                <a href="magic-level-6.html">六級魔法</a>
+                <a href="magic-level-7.html">七級魔法</a>
+                <a href="magic-level-8.html">八級魔法</a>
+                <a href="magic-level-9.html">九級魔法</a>
+                <a href="magic-level-10.html">十級魔法</a>
+              </div>
+            </div>
+            <div class="menu-group magic-crystal-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開精靈水晶"></button><a class="menu-link" href="magic-crystal.html">精靈水晶</a></div><div class="submenu magic-crystal-subMenu">
+                <a href="crystal-fire.html">火屬性</a>
+                <a href="crystal-water.html">水屬性</a>
+                <a href="crystal-wind.html">風屬性</a>
+                <a href="crystal-earth.html">地屬性</a>
+                <a href="crystal-neutral.html">無屬性</a>
+              </div>
+            </div>
+            <a href="magic-royal-book.html">技術書(王族)</a>
+            <a href="magic-knight-book.html">技術書(騎士)</a>
+          </div>
+        </div>
+        <div class="menu-group quest-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開任務介紹"></button><a class="menu-link" href="quest.html">任務介紹</a></div><div class="submenu quest-subMenu">
+            <div class="menu-group trial-royal-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開試煉任務[王族]"></button><a class="menu-link" href="quest-royal.html">試煉任務[王族]</a></div><div class="submenu trial-royal-subMenu">
+                <a href="trial-royal-15.html">15級試煉[王族]</a>
+                <a href="trial-royal-30.html">30級試煉[王族]</a>
+                <a href="trial-royal-45.html">45級試煉[王族]</a>
+              </div>
+            </div>
+            <div class="menu-group trial-knight-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開試煉任務[騎士]"></button><a class="menu-link" href="quest-knight.html">試煉任務[騎士]</a></div><div class="submenu trial-knight-subMenu">
+                <a href="trial-knight-15.html">15級試煉[騎士]</a>
+                <a href="trial-knight-30.html">30級試煉[騎士]</a>
+                <a href="trial-knight-45.html">45級試煉[騎士]</a>
+              </div>
+            </div>
+            <div class="menu-group trial-elf-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開試煉任務[妖精]"></button><a class="menu-link" href="quest-elf.html">試煉任務[妖精]</a></div><div class="submenu trial-elf-subMenu">
+                <a href="trial-elf-15.html">15級試煉[妖精]</a>
+                <a href="trial-elf-30.html">30級試煉[妖精]</a>
+                <a href="trial-elf-45.html">45級試煉[妖精]</a>
+              </div>
+            </div>
+            <div class="menu-group trial-wizard-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開試煉任務[法師]"></button><a class="menu-link" href="quest-wizard.html">試煉任務[法師]</a></div><div class="submenu trial-wizard-subMenu">
+                <a href="trial-wizard-15-up.html">15級試煉[法師]"上"</a>
+                <a href="trial-wizard-15-down.html">15級試煉[法師]"下"</a>
+                <a href="trial-wizard-30-up.html">30級試煉[法師]"上"</a>
+                <a href="trial-wizard-30-down.html">30級試煉[法師]"下"</a>
+                <a href="trial-wizard-45.html">45級試煉[法師]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="map.html">地圖介紹</a>
+        <a href="doll.html">娃娃介紹</a>
+        <a href="contact.html">聯繫我們</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <section class="hero" aria-label="伺服器主視覺"><img src="img/hero.png" alt="神罰天堂"/></section>
+      <section class="detail-page">
+        <div class="detail-panel">
+          <h2>【15級試煉[法師]"下"】</h2>
+          <img class="trial-detail-image" src="img/trial-wizard-15-down.jpg" alt="15級試煉[法師]下"/>
+          <div class="trial-copy">
+  <h3>任務說明</h3>
+  <p class="trial-subtitle">法師試煉任務-詹姆的請求</p>
+  <p>到說話之島村莊裡找詹姆對話後，他會請你幫忙尋找魔法研究的材料。</p>
+  <p>尋找食屍鬼並打倒，取得食屍鬼的指甲及食屍鬼的牙齒，交給詹姆後得到受詛咒的魔法書。</p>
+  <p>詹姆給你的受詛咒的魔法書只是半成品，若需要更多魔力能量，必須找到骷髏頭。</p>
+  <p>尋找骷髏並打倒取得骷髏頭，最後將骷髏頭及受詛咒的魔法書交給詹姆後，他會完成「魔法能量之書」。</p>
+</div>
+        </div>
+      </section>
+    </main>
+  </div>  <script>
+    document.querySelectorAll('.menu-toggle').forEach(function (toggle) {
+      toggle.addEventListener('click', function () {
+        var group = toggle.closest('.menu-group');
+        if (!group) return;
+        var isOpen = group.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
