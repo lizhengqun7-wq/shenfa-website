@@ -423,6 +423,35 @@
       object-fit: contain !important;
       background: #000;
     }
+      .item-stats {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    .item-stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #d8d8d8;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #3a3a3a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .item-stats-table th,
+    .item-stats-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      vertical-align: top;
+    }
+    .item-stats-table th {
+      color: #f0f0f0;
+      background: #242424;
+      font-weight: 900;
+    }
+    .item-stats-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.035);
+    }
   </style>
 </head>
 <body>
@@ -535,13 +564,64 @@
       <section class="detail-page">
         <div class="detail-panel">
           <h2 class="weapon-heading">【武器介紹】</h2>
-          <div class="weapon-grid">
-            <a class="weapon-card" href="weapon-dagger.html"><img src="img/weapon-dagger.png" alt="匕首"/><span>【匕首】</span></a>
-            <a class="weapon-card" href="weapon-bow.html"><img src="img/weapon-bow.png" alt="弓箭"/><span>【弓箭】</span></a>
-            <a class="weapon-card" href="weapon-spear.html"><img src="img/weapon-spear.png" alt="長矛"/><span>【長矛】</span></a>
-            <a class="weapon-card" href="weapon-staff.html"><img src="img/weapon-staff.png" alt="魔杖"/><span>【魔杖】</span></a>
-<a class="weapon-card" href="weapon-onehand-sword.html"><img src="img/weapon-onehand-sword.png" alt="單手劍"/><span>【單手劍】</span></a>
-            <a class="weapon-card" href="weapon-twohand-sword.html"><img src="img/weapon-twohand-sword.png" alt="雙手劍"/><span>【雙手劍】</span></a>
+                    <div class="item-stats" aria-label="武器能力值說明">
+            <table class="item-stats-table">
+              <thead><tr><th>名稱</th><th>傷害(小/大)</th><th>能力值</th></tr></thead>
+              <tbody>
+                <tr><td>歐西斯匕首</td><td>2/3</td><td>額外命中+2</td></tr>
+                <tr><td>骰子匕首</td><td>1/3</td><td>額外命中-1</td></tr>
+                <tr><td>短劍的劍身</td><td>2/2</td><td>—</td></tr>
+                <tr><td>匕首</td><td>4/2</td><td>額外命中+2</td></tr>
+                <tr><td>精靈匕首</td><td>4/3</td><td>額外命中+2</td></tr>
+                <tr><td>米索莉短劍</td><td>7/7</td><td>MP回復+6、魔攻+1</td></tr>
+                <tr><td>奧里哈魯根短劍</td><td>10/10</td><td>額外命中+1、額外傷害+2、力量+1</td></tr>
+                <tr><td>小武士刀</td><td>8/8</td><td>額外命中+1、額外傷害+1</td></tr>
+                <tr><td>水晶短劍</td><td>11/8</td><td>額外命中+2、額外傷害+3、力量+1</td></tr>
+                <tr><td>死亡之指</td><td>17/15</td><td>額外命中+3</td></tr>
+                <tr><td>鎖子甲破壞者</td><td>4/5</td><td>額外命中+10</td></tr>
+                <tr><td>紅騎士之劍</td><td>8/12</td><td>額外傷害+1、力量+1</td></tr>
+                <tr><td>大馬士革刀</td><td>10/11</td><td>—</td></tr>
+                <tr><td>武士刀</td><td>10/12</td><td>額外命中+1</td></tr>
+                <tr><td>細劍</td><td>11/6</td><td>—</td></tr>
+                <tr><td>古代黑暗妖精之劍</td><td>15/12</td><td>額外命中+2、額外傷害+4、力量+1</td></tr>
+                <tr><td>赤焰之劍</td><td>14/6</td><td>額外命中+4、額外傷害+3</td></tr>
+                <tr><td>黃金權杖</td><td>20/20</td><td>額外命中+5</td></tr>
+                <tr><td>雙手劍</td><td>17/19</td><td>—</td></tr>
+                <tr><td>黑燄之劍</td><td>16/10</td><td>額外命中+2</td></tr>
+                <tr><td>瑟魯基之劍</td><td>16/10</td><td>額外命中+2</td></tr>
+                <tr><td>惡魔之劍</td><td>17/9</td><td>額外命中+4、力量+1</td></tr>
+                <tr><td>巨劍</td><td>20/17</td><td>—</td></tr>
+                <tr><td>古老的巨劍</td><td>27/45</td><td>額外命中+3</td></tr>
+                <tr><td>古老的劍</td><td>35/25</td><td>額外命中+5</td></tr>
+                <tr><td>銀光雙刀</td><td>16/8</td><td>額外命中+3、額外傷害+2、雙倍傷害機率+8</td></tr>
+                <tr><td>大馬士革雙刀</td><td>13/9</td><td>雙倍傷害機率+8</td></tr>
+                <tr><td>幽暗雙刀</td><td>15/12</td><td>額外命中+2、額外傷害+2、雙倍傷害機率+15</td></tr>
+                <tr><td>暗黑雙刀</td><td>21/18</td><td>額外命中+5、額外傷害+7、力量+3、雙倍傷害機率+18</td></tr>
+                <tr><td>露西錘</td><td>15/17</td><td>額外命中+3、額外傷害+2</td></tr>
+                <tr><td>貝卡合金</td><td>17/17</td><td>—</td></tr>
+                <tr><td>水晶魔杖</td><td>1/1</td><td>MP回復+10</td></tr>
+                <tr><td>惡魔鐮刀</td><td>1/1</td><td>智力+1、MP回復+10、魔攻+5</td></tr>
+                <tr><td>拉斯塔巴德魔杖</td><td>3/3</td><td>MP回復+8、魔攻+1</td></tr>
+                <tr><td>巫術魔法杖</td><td>2/3</td><td>魔攻+1</td></tr>
+                <tr><td>瑪那魔杖</td><td>3/3</td><td>額外命中-3</td></tr>
+                <tr><td>古老的鋼鐵瑪那魔杖</td><td>12/12</td><td>額外命中+5、額外傷害+5</td></tr>
+                <tr><td>力量魔法杖</td><td>9/9</td><td>額外傷害+3、力量+3、魔攻-2</td></tr>
+                <tr><td>銀光鋼爪</td><td>13/10</td><td>額外傷害+2、雙倍傷害機率+18</td></tr>
+                <tr><td>大馬士革鋼爪</td><td>17/13</td><td>雙倍傷害機率+18</td></tr>
+                <tr><td>幽暗鋼爪</td><td>18/16</td><td>額外命中+1、額外傷害+3、雙倍傷害機率+24</td></tr>
+                <tr><td>暗黑鋼爪</td><td>28/22</td><td>額外命中+5、額外傷害+7、力量+3、雙倍傷害機率+36</td></tr>
+                <tr><td>黑暗十字弓</td><td>2/2</td><td>額外命中+3</td></tr>
+                <tr><td>獵人之弓</td><td>2/2</td><td>額外命中+5、額外傷害+1</td></tr>
+                <tr><td>幽暗十字弓</td><td>3/3</td><td>額外命中+5、額外傷害+3</td></tr>
+                <tr><td>古代妖精弩槍</td><td>4/3</td><td>額外命中+2、額外傷害+4、敏捷+1</td></tr>
+                <tr><td>十字弓</td><td>3/2</td><td>額外命中+3、額外傷害+2</td></tr>
+                <tr><td>尤米弓</td><td>3/3</td><td>額外傷害+3、敏捷+1</td></tr>
+                <tr><td>赤焰之弓</td><td>3/3</td><td>額外命中+2、額外傷害+4</td></tr>
+                <tr><td>暗黑十字弓</td><td>7/6</td><td>額外命中+5、額外傷害+7、敏捷+3</td></tr>
+                <tr><td>消滅者鎖鏈劍</td><td>17/13</td><td>額外命中+5、額外傷害+3</td></tr>
+                <tr><td>破滅者鎖鏈劍</td><td>21/17</td><td>額外命中+5、額外傷害+3、力量+1</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -558,6 +638,7 @@
   </script>
 </body>
 </html>
+
 
 
 
