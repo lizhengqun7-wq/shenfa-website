@@ -284,6 +284,12 @@
     .menu-toggle-row .menu-link {
       flex: 1 1 auto;
     }
+    .quest-menu,
+    .side-menu a[href^="quest"],
+    .side-menu a[href^="trial-"],
+    .intro-card#quest {
+      display: none !important;
+    }
     /* menu-polish: left navigation hierarchy */
     .side-menu {
       gap: 16px;
@@ -420,7 +426,6 @@
       <nav class="side-menu" aria-label="介紹選單">
         <a href="index.html">神罰天堂</a>
         <a href="idea.html">經營理念</a>
-        <a href="account.html">帳號申請</a>
         <a href="download.html">下載區</a>
         <a href="server.html">伺服器設定</a>
         <div class="menu-group class-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開職業介紹"></button><a class="menu-link" href="class.html">職業介紹</a></div><div class="submenu class-submenu">
@@ -540,21 +545,18 @@
               <p>強化值 (含) 3~5 跳 2 機率 : 20%</p>
             </div>
 
-            <div class="setting-block">
+                        <div class="setting-block">
               <h3>召喚相關設定(法師) :</h3>
-              <p>隱藏魅力 0</p>
-              <p>魅力上限 18</p>
-              <p>2 點魅力召喚 食人妖精  1 隻(最高9隻)</p>
-              <p>角色等級 28 ~ 52 每一階段食人妖精 加血, 加傷害</p>
-              <p>召喚獸攻擊玩家傷害 無減免</p>
+              <p>隱藏魅力 6</p>
+              <p>魅力上限 34</p>
+              <p>召喚怪攻擊玩家傷害 傷害/8</p>
             </div>
 
             <div class="setting-block">
               <h3>寵物相關設定(全職) :</h3>
-              <p>法師隱藏魅力 0</p>
               <p>妖精隱藏魅力 12</p>
               <p>其他隱藏魅力 6</p>
-              <p>法師魅力上限 18</p>
+              <p>魅力上限 34</p>
               <p>6點魅力抓取一隻寵物</p>
               <p>寵物攻擊玩家傷害 傷害/8</p>
             </div>
@@ -567,15 +569,6 @@
               <p>黑妖 6 點防禦 = 1 點減傷</p>
               <p>龍騎 6 點防禦 = 1 點減傷</p>
               <p>妖精 7 點防禦 = 1 點減傷</p>
-            </div>
-
-            <div class="setting-block">
-              <h3>特殊功能 :</h3>
-              <p>自我強化加速藥水 可堆加秒數( 7200秒 )</p>
-              <p>技能 加速術 可堆加秒數( 7200秒 )</p>
-              <p>技能 神聖疾走 增加攻.跑速</p>
-              <p>技能 風之疾走 增加攻.跑速</p>
-              <p>技能 行走加速 增加攻.跑速</p>
             </div>
 
             <div class="setting-block">

@@ -220,6 +220,12 @@
     .menu-toggle-row .menu-link {
       flex: 1 1 auto;
     }
+    .quest-menu,
+    .side-menu a[href^="quest"],
+    .side-menu a[href^="trial-"],
+    .intro-card#quest {
+      display: none !important;
+    }
     /* menu-polish: left navigation hierarchy */
     .side-menu {
       gap: 16px;
@@ -365,7 +371,6 @@
       <nav class="side-menu" aria-label="介紹選單">
         <a href="index.html">神罰天堂</a>
         <a href="idea.html">經營理念</a>
-        <a href="account.html">帳號申請</a>
         <a href="download.html">下載區</a>
         <a href="server.html">伺服器設定</a>
         <div class="menu-group class-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開職業介紹"></button><a class="menu-link" href="class.html">職業介紹</a></div><div class="submenu class-submenu">
