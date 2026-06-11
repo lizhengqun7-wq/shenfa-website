@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>30級試煉[王族] - 神罰天堂</title>
+  <title>鎖鏈劍 - 神罰天堂</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html, body { min-height: 100%; }
@@ -65,7 +65,7 @@
     .side-menu button:hover { color: #eeeeee; }
     .menu-group {
       display: grid;
-      gap: 14px;
+      gap: 0;
       position: relative;
     }
     
@@ -144,7 +144,7 @@
       }
       .server-logo { margin-bottom: 28px; }
       .side-menu { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 20px; }
-      .submenu { gap: 14px; }
+      .submenu { gap: 0; }
       .top-name { height: 54px; padding: 0 22px; }
       .hero { min-height: 320px; }
       .card-grid { grid-template-columns: 1fr; padding: 28px 24px 54px; }
@@ -297,7 +297,7 @@
       margin-top: 4px;
     }
     .submenu .submenu {
-      gap: 14px;
+      gap: 0;
       padding-left: 30px;
       margin-top: 2px;
     }
@@ -373,73 +373,71 @@
       max-width: none !important;
       margin: 0 !important;
     }
-    /* trial-page-image: image inside each trial detail card */
-    .trial-detail-image {
+    /* item-gallery-style */
+    .item-gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 18px;
+      justify-items: center;
+    }
+    .item-gallery-card {
+      display: grid;
+      gap: 0;
+      place-items: center;
       width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      min-height: 0;
+    }
+    .item-gallery-card img {
+      width: min(100%, 760px);
+      height: auto;
       max-height: none;
       object-fit: contain;
       display: block;
-      margin: 0 0 26px;
-      background: #000;
-      border: 1px solid #242424;
     }
-    /* trial-title-style: match weapon heading */
-    .detail-panel h2 {
-      color: #39ff14 !important;
+.item-gallery-empty {
+      margin-top: 26px;
+      color: #ffc8d8 !important;
       text-align: center;
-      font-size: clamp(42px, 4vw, 76px);
-      text-shadow: 0 0 10px rgba(57, 255, 20, 0.28);
+      font-size: clamp(20px, 1.8vw, 32px) !important;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* trial-copy-style: centered walkthrough text under image */
-    .trial-copy {
-      max-width: 1180px;
-      margin: 0 auto;
-      text-align: center;
+    @media (max-width: 680px) {
+      .item-gallery { gap: 10px; }
+      .item-gallery-card img { width: 100%; }
+    }
+    .item-stats {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    .item-stats-table {
+      width: 100%;
+      border-collapse: collapse;
       color: #d8d8d8;
-      font-weight: 800;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #3a3a3a;
+      font-size: 16px;
+      line-height: 1.7;
     }
-    .trial-copy h3 {
-      margin: 10px 0 28px;
-      color: #ffc8d8;
-      font-size: clamp(32px, 3vw, 54px);
-      line-height: 1.15;
-      text-shadow: 0 0 10px rgba(255, 200, 216, 0.24), 1px 1px 0 #000;
+    .item-stats-table th,
+    .item-stats-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      vertical-align: top;
     }
-    .trial-copy .trial-subtitle {
-      margin: 0 0 24px;
-      color: #f1f1f1;
-      font-size: clamp(24px, 2.1vw, 40px);
-      line-height: 1.35;
-      text-shadow: 1px 1px 0 #000;
+    .item-stats-table th {
+      color: #f0f0f0;
+      background: #242424;
+      font-weight: 900;
     }
-    .trial-copy p {
-      margin: 0 0 18px;
-      font-size: clamp(18px, 1.45vw, 26px);
-      line-height: 1.9;
-      text-shadow: 1px 1px 0 #000;
+    .item-stats-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.035);
     }
-    .trial-copy .note-title {
-      margin-top: 32px;
-      color: #ffc8d8;
-      font-size: clamp(22px, 1.8vw, 34px);
-    }
-</style>
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -553,18 +551,17 @@
     <main class="content">
       <section class="hero" aria-label="伺服器主視覺"><img src="img/hero.png" alt="神罰天堂"/></section>
       <section class="detail-page">
-        <div class="detail-panel">
-          <h2>【30級試煉[王族]】</h2>
-          <img class="trial-detail-image" src="img/trial-royal-30.jpg" alt="30級試煉[王族]"/>
-          <div class="trial-copy">
-  <h3>任務說明</h3>
-  <p class="trial-subtitle">王族試煉任務-艾莉亞的請求</p>
-  <p>到達風木村尋找村長的女兒艾莉亞，得知風木村正受到沙漠中螞蟻的攻擊，透過對話之後接下任務。</p>
-  <p>來到沙漠右下的蟻穴進入洞穴遇到搜查螞蟻，但牠說著螞蟻的語言，此時須變身為巨蟻後重新進入遊戲再次對話。</p>
-  <p>得知攻擊風木村民的是變種螞蟻後，找尋附近的看守螞蟻，並變身為巨大兵蟻重登後對話，牠會傳送你到變種巨蟻女王的巢穴。</p>
-  <p>通過並打敗變種巨大螞蟻女王後取得村民的遺物，帶回給艾莉亞後獲得艾莉亞的回報。</p>
-  <p>將艾莉亞的回報點選使用，即可得到王族試煉道具君主的威嚴和魔法書－呼喚盟友。</p>
-</div>
+                <div class="detail-panel">
+          <h2>【鎖鏈劍】</h2>
+                              <div class="item-stats" aria-label="武器能力值 — 鎖鏈劍（chainsword）">
+            <table class="item-stats-table">
+              <thead><tr><th>名稱</th><th>傷害(小/大)</th><th>能力值</th></tr></thead>
+              <tbody>
+                <tr><td>消滅者鎖鏈劍</td><td>17/13</td><td>額外命中+5、額外傷害+3</td></tr>
+                <tr><td>破滅者鎖鏈劍</td><td>21/17</td><td>額外命中+5、額外傷害+3、力量+1</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </main>
@@ -580,6 +577,9 @@
   </script>
 </body>
 </html>
+
+
+
 
 
 
