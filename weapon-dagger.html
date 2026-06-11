@@ -408,7 +408,36 @@
       .item-gallery { gap: 10px; }
       .item-gallery-card img { width: 100%; }
     }
-</style>
+    .item-stats {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    .item-stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #d8d8d8;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #3a3a3a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .item-stats-table th,
+    .item-stats-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      vertical-align: top;
+    }
+    .item-stats-table th {
+      color: #f0f0f0;
+      background: #242424;
+      font-weight: 900;
+    }
+    .item-stats-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.035);
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -432,8 +461,7 @@
             <a href="weapon-bow.html">弓箭</a>
             <a href="weapon-spear.html">長矛</a>
             <a href="weapon-staff.html">魔杖</a>
-            <a href="weapon-axe.html">斧頭</a>
-            <a href="weapon-onehand-sword.html">單手劍</a>
+<a href="weapon-onehand-sword.html">單手劍</a>
             <a href="weapon-twohand-sword.html">雙手劍</a>
           </div>
         </div>
@@ -521,11 +549,21 @@
       <section class="detail-page">
                 <div class="detail-panel">
           <h2>【匕首】</h2>
-          <div class="item-gallery" aria-label="匕首圖片">
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-dagger/001.png" alt="01_歐西斯匕首"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-dagger/002.png" alt="02_骰子匕首"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-dagger/003.png" alt="03_匕首"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-dagger/004.png" alt="04_精靈匕首"/></figure>
+                    <div class="item-stats" aria-label="武器能力值 — 匕首（dagger）">
+            <table class="item-stats-table">
+              <thead><tr><th>名稱</th><th>傷害(小/大)</th><th>能力值</th></tr></thead>
+              <tbody>
+                <tr><td>歐西斯匕首</td><td>2/3</td><td>額外命中+2</td></tr>
+                <tr><td>骰子匕首</td><td>1/3</td><td>額外命中-1</td></tr>
+                <tr><td>匕首</td><td>4/2</td><td>額外命中+2</td></tr>
+                <tr><td>精靈匕首</td><td>4/3</td><td>額外命中+2</td></tr>
+                <tr><td>米索莉短劍</td><td>7/7</td><td>MP回復+6、魔攻+1</td></tr>
+                <tr><td>奧里哈魯根短劍</td><td>10/10</td><td>額外命中+1、額外傷害+2、力量+1</td></tr>
+                <tr><td>小武士刀</td><td>8/8</td><td>額外命中+1、額外傷害+1</td></tr>
+                <tr><td>水晶短劍</td><td>11/8</td><td>額外命中+2、額外傷害+3、力量+1</td></tr>
+                <tr><td>死亡之指</td><td>17/15</td><td>額外命中+3</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -542,6 +580,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 

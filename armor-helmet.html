@@ -408,7 +408,36 @@
       .item-gallery { gap: 10px; }
       .item-gallery-card img { width: 100%; }
     }
-</style>
+    .item-stats {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    .item-stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #d8d8d8;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #3a3a3a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .item-stats-table th,
+    .item-stats-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      vertical-align: top;
+    }
+    .item-stats-table th {
+      color: #f0f0f0;
+      background: #242424;
+      font-weight: 900;
+    }
+    .item-stats-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.035);
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -432,8 +461,7 @@
             <a href="weapon-bow.html">弓箭</a>
             <a href="weapon-spear.html">長矛</a>
             <a href="weapon-staff.html">魔杖</a>
-            <a href="weapon-axe.html">斧頭</a>
-            <a href="weapon-onehand-sword.html">單手劍</a>
+<a href="weapon-onehand-sword.html">單手劍</a>
             <a href="weapon-twohand-sword.html">雙手劍</a>
           </div>
         </div>
@@ -521,34 +549,20 @@
       <section class="detail-page">
                 <div class="detail-panel">
           <h2>【頭飾】</h2>
-          <div class="item-gallery" aria-label="頭飾圖片">
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/001.png" alt="01_皮帽子"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/002.png" alt="01_艾爾穆的祝福"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/003.png" alt="01_西瑪之帽"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/004.png" alt="01_精靈皮頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/005.png" alt="01_騎士頭巾"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/006.png" alt="02_侏儒鐵盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/007.png" alt="02_紅騎士頭巾"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/008.png" alt="02_銀釘皮帽"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/009.png" alt="03_皮頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/010.png" alt="03_精靈敏捷頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/011.png" alt="03_騎士面甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/012.png" alt="04_精靈體質頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/013.png" alt="04_骷髏頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/014.png" alt="05_小型風之頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/015.png" alt="05_鋼盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/016.png" alt="06_抗魔法頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/017.png" alt="06_風之頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/018.png" alt="06_歐西斯頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/019.png" alt="07_法師之帽"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/020.png" alt="07_精靈皮盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/021.png" alt="08_巴土瑟之帽"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/022.png" alt="08_治癒魔法頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/023.png" alt="08_鋼鐵頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/024.png" alt="09_卡士伯之帽"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/025.png" alt="09_敏捷魔法頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/026.png" alt="10_力量魔法頭盔"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-helmet/027.png" alt="10_馬庫爾之帽"/></figure>
+                    <div class="item-stats" aria-label="防具能力值 — 頭盔（helm）">
+            <table class="item-stats-table">
+              <thead><tr><th>名稱</th><th>防禦</th><th>附加能力</th></tr></thead>
+              <tbody>
+                <tr><td>騎士面甲</td><td>-3</td><td>安定值4、職業:騎士/龍騎士</td></tr>
+                <tr><td>抗魔法頭盔</td><td>-2</td><td>抗魔+4、安定值4、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>法師之帽</td><td>-2</td><td>安定值4、職業:法師</td></tr>
+                <tr><td>馬庫爾之帽</td><td>-2</td><td>智力+1、安定值4、職業:法師</td></tr>
+                <tr><td>巴土瑟之帽</td><td>-2</td><td>MP回復+5、安定值4、職業:法師</td></tr>
+                <tr><td>西瑪之帽</td><td>-2</td><td>MP+15、MP回復+2、安定值4、職業:法師</td></tr>
+                <tr><td>艾爾穆的祝福</td><td>-2</td><td>敏捷+1、安定值6、職業:妖精</td></tr>
+                <tr><td>卡士伯之帽</td><td>-2</td><td>MP+25、安定值4、職業:法師</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -565,6 +579,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 

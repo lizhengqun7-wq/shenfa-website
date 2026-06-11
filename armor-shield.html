@@ -408,7 +408,36 @@
       .item-gallery { gap: 10px; }
       .item-gallery-card img { width: 100%; }
     }
-</style>
+    .item-stats {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    .item-stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #d8d8d8;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #3a3a3a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .item-stats-table th,
+    .item-stats-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      vertical-align: top;
+    }
+    .item-stats-table th {
+      color: #f0f0f0;
+      background: #242424;
+      font-weight: 900;
+    }
+    .item-stats-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.035);
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -432,8 +461,7 @@
             <a href="weapon-bow.html">弓箭</a>
             <a href="weapon-spear.html">長矛</a>
             <a href="weapon-staff.html">魔杖</a>
-            <a href="weapon-axe.html">斧頭</a>
-            <a href="weapon-onehand-sword.html">單手劍</a>
+<a href="weapon-onehand-sword.html">單手劍</a>
             <a href="weapon-twohand-sword.html">雙手劍</a>
           </div>
         </div>
@@ -521,19 +549,18 @@
       <section class="detail-page">
                 <div class="detail-panel">
           <h2>【盾牌】</h2>
-          <div class="item-gallery" aria-label="盾牌圖片">
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-shield/001.png" alt="01_皮盾牌"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-shield/002.png" alt="01_骷髏盾牌"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-shield/003.png" alt="02_塔盾"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-shield/004.png" alt="03_小盾牌"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-shield/005.png" alt="03_鋼鐵盾牌"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-shield/006.png" alt="04_阿克海盾牌"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-shield/007.png" alt="06_侏儒圓盾"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-shield/008.png" alt="06_魔法能量之書"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-shield/009.png" alt="07_大盾牌"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-shield/010.png" alt="08_精靈盾牌"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-shield/011.png" alt="09_銀騎士之盾"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-shield/012.png" alt="10_反射之盾"/></figure>
+                    <div class="item-stats" aria-label="防具能力值 — 盾牌（shield）">
+            <table class="item-stats-table">
+              <thead><tr><th>名稱</th><th>防禦</th><th>附加能力</th></tr></thead>
+              <tbody>
+                <tr><td>瑪那 水晶球</td><td>-2</td><td>智力+1、MP+100、安定值4、職業:法師</td></tr>
+                <tr><td>魔法能量之書</td><td>-2</td><td>智力+1、安定值4、職業:法師</td></tr>
+                <tr><td>梅杜莎盾牌</td><td>-2</td><td>石化耐性+30、安定值4、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>反射之盾</td><td>-2</td><td>石化耐性+20、安定值4、職業:王族/騎士/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>精靈盾牌</td><td>-2</td><td>安定值6、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>銀騎士之盾</td><td>-2</td><td>抗魔+4、安定值4、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -550,6 +577,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 

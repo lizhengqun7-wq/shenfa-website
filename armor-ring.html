@@ -408,7 +408,36 @@
       .item-gallery { gap: 10px; }
       .item-gallery-card img { width: 100%; }
     }
-</style>
+    .item-stats {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    .item-stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #d8d8d8;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #3a3a3a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .item-stats-table th,
+    .item-stats-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      vertical-align: top;
+    }
+    .item-stats-table th {
+      color: #f0f0f0;
+      background: #242424;
+      font-weight: 900;
+    }
+    .item-stats-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.035);
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -432,8 +461,7 @@
             <a href="weapon-bow.html">弓箭</a>
             <a href="weapon-spear.html">長矛</a>
             <a href="weapon-staff.html">魔杖</a>
-            <a href="weapon-axe.html">斧頭</a>
-            <a href="weapon-onehand-sword.html">單手劍</a>
+<a href="weapon-onehand-sword.html">單手劍</a>
             <a href="weapon-twohand-sword.html">雙手劍</a>
           </div>
         </div>
@@ -521,16 +549,22 @@
       <section class="detail-page">
                 <div class="detail-panel">
           <h2>【戒指】</h2>
-          <div class="item-gallery" aria-label="戒指圖片">
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-ring/001.png" alt="01_傳送控制戒指"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-ring/002.png" alt="02_變形控制戒指"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-ring/003.png" alt="03_火靈戒指"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-ring/004.png" alt="04_水靈戒指"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-ring/005.png" alt="05_風靈戒指"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-ring/006.png" alt="06_地靈戒指"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-ring/007.png" alt="07_抗魔戒指"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-ring/008.png" alt="08_滅魔戒指"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-ring/009.png" alt="09_守護者戒指"/></figure>
+                    <div class="item-stats" aria-label="防具能力值 — 戒指（ring）">
+            <table class="item-stats-table">
+              <thead><tr><th>名稱</th><th>防禦</th><th>附加能力</th></tr></thead>
+              <tbody>
+                <tr><td>滅魔戒指</td><td>0</td><td>抗魔+10、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>變形控制戒指</td><td>0</td><td>職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>召喚控制戒指</td><td>0</td><td>職業:法師</td></tr>
+                <tr><td>水靈戒指</td><td>0</td><td>水屬防禦+30、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>傳送控制戒指</td><td>0</td><td>職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>潔尼斯戒指</td><td>0</td><td>抗中毒、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>地靈戒指</td><td>0</td><td>地屬防禦+30、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>風靈戒指</td><td>0</td><td>風屬防禦+30、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>抗魔戒指</td><td>0</td><td>抗魔+5、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>火靈戒指</td><td>0</td><td>火屬防禦+30、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -547,6 +581,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 

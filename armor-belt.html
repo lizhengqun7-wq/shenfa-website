@@ -408,7 +408,36 @@
       .item-gallery { gap: 10px; }
       .item-gallery-card img { width: 100%; }
     }
-</style>
+    .item-stats {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    .item-stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #d8d8d8;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #3a3a3a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .item-stats-table th,
+    .item-stats-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      vertical-align: top;
+    }
+    .item-stats-table th {
+      color: #f0f0f0;
+      background: #242424;
+      font-weight: 900;
+    }
+    .item-stats-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.035);
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -432,8 +461,7 @@
             <a href="weapon-bow.html">弓箭</a>
             <a href="weapon-spear.html">長矛</a>
             <a href="weapon-staff.html">魔杖</a>
-            <a href="weapon-axe.html">斧頭</a>
-            <a href="weapon-onehand-sword.html">單手劍</a>
+<a href="weapon-onehand-sword.html">單手劍</a>
             <a href="weapon-twohand-sword.html">雙手劍</a>
           </div>
         </div>
@@ -521,19 +549,26 @@
       <section class="detail-page">
                 <div class="detail-panel">
           <h2>【腰帶】</h2>
-          <div class="item-gallery" aria-label="腰帶圖片">
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-belt/001.png" alt="01_多羅皮帶"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-belt/002.png" alt="01_泰坦皮帶"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-belt/003.png" alt="02_小型身體腰帶"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-belt/004.png" alt="03_小型精神腰帶"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-belt/005.png" alt="04_小型靈魂腰帶"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-belt/006.png" alt="04_光明靈魂腰帶"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-belt/007.png" alt="05_精神腰帶"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-belt/008.png" alt="06_靈魂腰帶"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-belt/009.png" alt="07_身體腰帶"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-belt/010.png" alt="08_歐吉皮帶"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-belt/011.png" alt="09_勇敢皮帶"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-belt/012.png" alt="10_古代巨人戒指"/></figure>
+                    <div class="item-stats" aria-label="防具能力值 — 腰帶（belt）">
+            <table class="item-stats-table">
+              <thead><tr><th>名稱</th><th>防禦</th><th>附加能力</th></tr></thead>
+              <tbody>
+                <tr><td>小型身體腰帶</td><td>0</td><td>HP+30、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>小型靈魂腰帶</td><td>0</td><td>HP+15、MP+15、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>小型精神腰帶</td><td>0</td><td>MP+30、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>光明身體腰帶</td><td>0</td><td>HP+50、HP回復+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>光明靈魂腰帶</td><td>0</td><td>HP+20、MP+20、HP回復+1、MP回復+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>光明精神腰帶</td><td>0</td><td>MP+50、MP回復+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>身體腰帶</td><td>0</td><td>HP+50、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>古代巨人戒指</td><td>-2</td><td>力量+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>靈魂腰帶</td><td>0</td><td>HP+25、MP+25、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>歐吉皮帶</td><td>0</td><td>負重減免+40、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>勇敢皮帶</td><td>-1</td><td>HP+30、職業:騎士/龍騎士</td></tr>
+                <tr><td>精神腰帶</td><td>0</td><td>MP+50、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>泰坦皮帶</td><td>0</td><td>負重減免+100、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>多羅皮帶</td><td>0</td><td>負重減免+20、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -550,6 +585,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 

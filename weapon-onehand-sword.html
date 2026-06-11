@@ -408,7 +408,36 @@
       .item-gallery { gap: 10px; }
       .item-gallery-card img { width: 100%; }
     }
-</style>
+    .item-stats {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    .item-stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #d8d8d8;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #3a3a3a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .item-stats-table th,
+    .item-stats-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      vertical-align: top;
+    }
+    .item-stats-table th {
+      color: #f0f0f0;
+      background: #242424;
+      font-weight: 900;
+    }
+    .item-stats-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.035);
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -432,8 +461,7 @@
             <a href="weapon-bow.html">弓箭</a>
             <a href="weapon-spear.html">長矛</a>
             <a href="weapon-staff.html">魔杖</a>
-            <a href="weapon-axe.html">斧頭</a>
-            <a href="weapon-onehand-sword.html">單手劍</a>
+<a href="weapon-onehand-sword.html">單手劍</a>
             <a href="weapon-twohand-sword.html">雙手劍</a>
           </div>
         </div>
@@ -521,27 +549,25 @@
       <section class="detail-page">
                 <div class="detail-panel">
           <h2>【單手劍】</h2>
-          <div class="item-gallery" aria-label="單手劍圖片">
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/001.png" alt="01_短劍的劍身"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/002.png" alt="02_長劍的劍身"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/003.png" alt="03_奧里哈魯根的劍身"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/004.png" alt="03_瑟魯基之劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/005.png" alt="03_彎刀"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/006.png" alt="04_長劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/007.png" alt="04_歐西斯短劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/008.png" alt="05_銀長劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/009.png" alt="05_鎖子甲破壞者"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/010.png" alt="06_受封印被遺忘的劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/011.png" alt="06_紅騎士之劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/012.png" alt="06_海賊彎刀"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/013.png" alt="07_侵略者之劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/014.png" alt="07_短劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/015.png" alt="08_大馬士革刀"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/016.png" alt="08_古老的劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/017.png" alt="08_銀劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/018.png" alt="09_小侏儒短劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/019.png" alt="09_武士刀"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-onehand-sword/020.png" alt="10_細劍"/></figure>
+                    <div class="item-stats" aria-label="武器能力值 — 單手劍（sword）">
+            <table class="item-stats-table">
+              <thead><tr><th>名稱</th><th>傷害(小/大)</th><th>能力值</th></tr></thead>
+              <tbody>
+                <tr><td>短劍的劍身</td><td>2/2</td><td>—</td></tr>
+                <tr><td>鎖子甲破壞者</td><td>4/5</td><td>額外命中+10</td></tr>
+                <tr><td>紅騎士之劍</td><td>8/12</td><td>額外傷害+1、力量+1</td></tr>
+                <tr><td>大馬士革刀</td><td>10/11</td><td>—</td></tr>
+                <tr><td>武士刀</td><td>10/12</td><td>額外命中+1</td></tr>
+                <tr><td>細劍</td><td>11/6</td><td>—</td></tr>
+                <tr><td>古代黑暗妖精之劍</td><td>15/12</td><td>額外命中+2、額外傷害+4、力量+1</td></tr>
+                <tr><td>赤焰之劍</td><td>14/6</td><td>額外命中+4、額外傷害+3</td></tr>
+                <tr><td>黃金權杖</td><td>20/20</td><td>額外命中+5</td></tr>
+                <tr><td>黑燄之劍</td><td>16/10</td><td>額外命中+2</td></tr>
+                <tr><td>瑟魯基之劍</td><td>16/10</td><td>額外命中+2</td></tr>
+                <tr><td>惡魔之劍</td><td>17/9</td><td>額外命中+4、力量+1</td></tr>
+                <tr><td>古老的劍</td><td>35/25</td><td>額外命中+5</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -558,6 +584,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 

@@ -408,7 +408,36 @@
       .item-gallery { gap: 10px; }
       .item-gallery-card img { width: 100%; }
     }
-</style>
+    .item-stats {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    .item-stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #d8d8d8;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #3a3a3a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .item-stats-table th,
+    .item-stats-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      vertical-align: top;
+    }
+    .item-stats-table th {
+      color: #f0f0f0;
+      background: #242424;
+      font-weight: 900;
+    }
+    .item-stats-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.035);
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -432,8 +461,7 @@
             <a href="weapon-bow.html">弓箭</a>
             <a href="weapon-spear.html">長矛</a>
             <a href="weapon-staff.html">魔杖</a>
-            <a href="weapon-axe.html">斧頭</a>
-            <a href="weapon-onehand-sword.html">單手劍</a>
+<a href="weapon-onehand-sword.html">單手劍</a>
             <a href="weapon-twohand-sword.html">雙手劍</a>
           </div>
         </div>
@@ -521,42 +549,23 @@
       <section class="detail-page">
                 <div class="detail-panel">
           <h2>【盔甲】</h2>
-          <div class="item-gallery" aria-label="盔甲圖片">
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/001.png" alt="01_古老的長袍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/002.png" alt="01_皮甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/003.png" alt="01_環甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/004.png" alt="02_巴風特盔甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/005.png" alt="02_古老的鱗甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/006.png" alt="02_精靈金屬盔甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/007.png" alt="02_鱗甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/008.png" alt="03_金屬盔甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/009.png" alt="03_銀釘皮背心"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/010.png" alt="03_歐西斯鏈甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/011.png" alt="04_小藤甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/012.png" alt="04_精靈護胸金屬板"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/013.png" alt="05_皮夾克"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/014.png" alt="05_被遺忘的皮盔甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/015.png" alt="05_綿質長袍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/016.png" alt="05_骷髏盔甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/017.png" alt="06_皮背心"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/018.png" alt="06_被遺忘的金屬盔甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/019.png" alt="06_精靈皮盔甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/020.png" alt="06_精靈鏈甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/021.png" alt="06_歐西斯環甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/022.png" alt="07_皮盔甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/023.png" alt="07_法師長袍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/024.png" alt="07_被遺忘的長袍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/025.png" alt="07_鏈甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/026.png" alt="08_抗魔法鏈甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/027.png" alt="08_被遺忘的鱗甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/028.png" alt="08_硬皮背心"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/029.png" alt="08_鋼鐵金屬盔甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/030.png" alt="09_古老的皮盔甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/031.png" alt="09_青銅盔甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/032.png" alt="10_古老的金屬盔甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/033.png" alt="10_黑長者長袍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/034.png" alt="10_銀釘皮甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-plate/035.png" alt="10_藤甲"/></figure>
+                    <div class="item-stats" aria-label="防具能力值 — 盔甲（armor）">
+            <table class="item-stats-table">
+              <thead><tr><th>名稱</th><th>防禦</th><th>附加能力</th></tr></thead>
+              <tbody>
+                <tr><td>古老的皮盔甲</td><td>-14</td><td>HP回復+4、MP回復+8、安定值-1、職業:妖精/黑妖/龍騎士</td></tr>
+                <tr><td>古老的長袍</td><td>-12</td><td>MP回復+12、安定值-1、職業:法師</td></tr>
+                <tr><td>古老的鱗甲</td><td>-14</td><td>HP回復+8、MP回復+4、安定值-1、職業:王族</td></tr>
+                <tr><td>古老的金屬盔甲</td><td>-16</td><td>HP回復+1、安定值-1、職業:騎士/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>抗魔法鏈甲</td><td>-5</td><td>抗魔+5、安定值4、職業:王族/騎士/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>法師長袍</td><td>-3</td><td>安定值4、職業:法師</td></tr>
+                <tr><td>巴風特盔甲</td><td>-8</td><td>安定值4、職業:王族/騎士/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>水晶盔甲</td><td>-8</td><td>安定值4、職業:王族/騎士/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>精靈鏈甲</td><td>-5</td><td>安定值6、職業:王族/騎士/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>精靈金屬盔甲</td><td>-6</td><td>近戰傷害+1、遠攻傷害+1、安定值6、職業:王族/騎士/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>黑長者長袍</td><td>-5</td><td>MP+50、MP回復+5、安定值4、職業:法師</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -573,6 +582,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 

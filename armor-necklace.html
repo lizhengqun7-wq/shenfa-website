@@ -408,7 +408,36 @@
       .item-gallery { gap: 10px; }
       .item-gallery-card img { width: 100%; }
     }
-</style>
+    .item-stats {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    .item-stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #d8d8d8;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #3a3a3a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .item-stats-table th,
+    .item-stats-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      vertical-align: top;
+    }
+    .item-stats-table th {
+      color: #f0f0f0;
+      background: #242424;
+      font-weight: 900;
+    }
+    .item-stats-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.035);
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -432,8 +461,7 @@
             <a href="weapon-bow.html">弓箭</a>
             <a href="weapon-spear.html">長矛</a>
             <a href="weapon-staff.html">魔杖</a>
-            <a href="weapon-axe.html">斧頭</a>
-            <a href="weapon-onehand-sword.html">單手劍</a>
+<a href="weapon-onehand-sword.html">單手劍</a>
             <a href="weapon-twohand-sword.html">雙手劍</a>
           </div>
         </div>
@@ -521,21 +549,25 @@
       <section class="detail-page">
                 <div class="detail-panel">
           <h2>【項鍊】</h2>
-          <div class="item-gallery" aria-label="項鍊圖片">
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/001.png" alt="01_小型精神項鍊"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/002.png" alt="02_小型魅力項鍊"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/003.png" alt="02_妖魔戰士護身符"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/004.png" alt="03_智力項鍊"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/005.png" alt="03_變形怪首領項鍊"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/006.png" alt="04_力量項鍊"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/007.png" alt="04_小型敏捷項鍊"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/008.png" alt="05_小型力量項鍊"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/009.png" alt="05_小型體質項鍊"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/010.png" alt="05_敏捷項鍊"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/011.png" alt="06_小型智力項鍊"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/012.png" alt="06_魅力項鍊"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/013.png" alt="07_體質項鍊"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-necklace/014.png" alt="08_精神項鍊"/></figure>
+                    <div class="item-stats" aria-label="防具能力值 — 項鍊（amulet）">
+            <table class="item-stats-table">
+              <thead><tr><th>名稱</th><th>防禦</th><th>附加能力</th></tr></thead>
+              <tbody>
+                <tr><td>小型魅力項鍊</td><td>0</td><td>智力-2、魅力+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>小型敏捷項鍊</td><td>0</td><td>體質-2、敏捷+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>小型力量項鍊</td><td>0</td><td>力量+1、敏捷-2、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>小型智力項鍊</td><td>0</td><td>智力+1、精神-2、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>小型精神項鍊</td><td>0</td><td>精神+1、魅力-2、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>小型體質項鍊</td><td>0</td><td>力量-2、體質+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>魅力項鍊</td><td>0</td><td>魅力+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>敏捷項鍊</td><td>0</td><td>敏捷+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>妖魔戰士護身符</td><td>0</td><td>HP+20、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>力量項鍊</td><td>0</td><td>力量+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>智力項鍊</td><td>0</td><td>智力+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>精神項鍊</td><td>0</td><td>精神+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>體質項鍊</td><td>0</td><td>體質+1、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -552,6 +584,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 

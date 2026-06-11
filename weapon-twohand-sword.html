@@ -408,7 +408,36 @@
       .item-gallery { gap: 10px; }
       .item-gallery-card img { width: 100%; }
     }
-</style>
+    .item-stats {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    .item-stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #d8d8d8;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #3a3a3a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .item-stats-table th,
+    .item-stats-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      vertical-align: top;
+    }
+    .item-stats-table th {
+      color: #f0f0f0;
+      background: #242424;
+      font-weight: 900;
+    }
+    .item-stats-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.035);
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -432,8 +461,7 @@
             <a href="weapon-bow.html">弓箭</a>
             <a href="weapon-spear.html">長矛</a>
             <a href="weapon-staff.html">魔杖</a>
-            <a href="weapon-axe.html">斧頭</a>
-            <a href="weapon-onehand-sword.html">單手劍</a>
+<a href="weapon-onehand-sword.html">單手劍</a>
             <a href="weapon-twohand-sword.html">雙手劍</a>
           </div>
         </div>
@@ -521,11 +549,15 @@
       <section class="detail-page">
                 <div class="detail-panel">
           <h2>【雙手劍】</h2>
-          <div class="item-gallery" aria-label="雙手劍圖片">
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-twohand-sword/001.png" alt="01_雙手劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-twohand-sword/002.png" alt="05_受封印被遺忘的巨劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-twohand-sword/003.png" alt="06_闊劍"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/weapon-twohand-sword/004.png" alt="07_古老的巨劍"/></figure>
+                    <div class="item-stats" aria-label="武器能力值 — 雙手劍（tohandsword）">
+            <table class="item-stats-table">
+              <thead><tr><th>名稱</th><th>傷害(小/大)</th><th>能力值</th></tr></thead>
+              <tbody>
+                <tr><td>雙手劍</td><td>17/19</td><td>—</td></tr>
+                <tr><td>巨劍</td><td>20/17</td><td>—</td></tr>
+                <tr><td>古老的巨劍</td><td>27/45</td><td>額外命中+3</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -542,6 +574,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 

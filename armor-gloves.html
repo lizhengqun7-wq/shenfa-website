@@ -408,7 +408,36 @@
       .item-gallery { gap: 10px; }
       .item-gallery-card img { width: 100%; }
     }
-</style>
+    .item-stats {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 24px;
+    }
+    .item-stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #d8d8d8;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid #3a3a3a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .item-stats-table th,
+    .item-stats-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #333;
+      text-align: left;
+      vertical-align: top;
+    }
+    .item-stats-table th {
+      color: #f0f0f0;
+      background: #242424;
+      font-weight: 900;
+    }
+    .item-stats-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.035);
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -432,8 +461,7 @@
             <a href="weapon-bow.html">弓箭</a>
             <a href="weapon-spear.html">長矛</a>
             <a href="weapon-staff.html">魔杖</a>
-            <a href="weapon-axe.html">斧頭</a>
-            <a href="weapon-onehand-sword.html">單手劍</a>
+<a href="weapon-onehand-sword.html">單手劍</a>
             <a href="weapon-twohand-sword.html">雙手劍</a>
           </div>
         </div>
@@ -521,12 +549,18 @@
       <section class="detail-page">
                 <div class="detail-panel">
           <h2>【手套】</h2>
-          <div class="item-gallery" aria-label="手套圖片">
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-gloves/001.png" alt="01_腕甲"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-gloves/002.png" alt="02_手套"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-gloves/003.png" alt="03_力量手套"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-gloves/004.png" alt="04_鋼鐵手套"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/armor-gloves/005.png" alt="06_皮製手套"/></figure>
+                    <div class="item-stats" aria-label="防具能力值 — 手套（glove）">
+            <table class="item-stats-table">
+              <thead><tr><th>名稱</th><th>防禦</th><th>附加能力</th></tr></thead>
+              <tbody>
+                <tr><td>鋼鐵手套</td><td>-1</td><td>安定值4、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>保護者手套</td><td>0</td><td>HP+20、MP+10、安定值4、職業:妖精</td></tr>
+                <tr><td>雪人手套</td><td>-1</td><td>冰凍耐性+8、HP+5、安定值4、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>水晶手套</td><td>-3</td><td>水屬性防禦+4、安定值4、職業:騎士/黑妖/龍騎士</td></tr>
+                <tr><td>力量手套</td><td>0</td><td>力量+2、安定值4、職業:王族/騎士/法師/妖精/黑妖/龍騎士</td></tr>
+                <tr><td>腕甲</td><td>0</td><td>遠攻命中+2、安定值4、職業:騎士/妖精/黑妖/龍騎士</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
@@ -543,6 +577,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
