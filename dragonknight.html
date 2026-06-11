@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>八級魔法 - 神罰天堂</title>
+  <title>龍騎士 - 神罰天堂</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html, body { min-height: 100%; }
@@ -65,7 +65,7 @@
     .side-menu button:hover { color: #eeeeee; }
     .menu-group {
       display: grid;
-      gap: 0;
+      gap: 14px;
       position: relative;
     }
     
@@ -144,7 +144,7 @@
       }
       .server-logo { margin-bottom: 28px; }
       .side-menu { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 20px; }
-      .submenu { gap: 0; }
+      .submenu { gap: 14px; }
       .top-name { height: 54px; padding: 0 22px; }
       .hero { min-height: 320px; }
       .card-grid { grid-template-columns: 1fr; padding: 28px 24px 54px; }
@@ -226,6 +226,57 @@
     .trial-elf-subMenu,
     .trial-wizard-subMenu {
       padding-left: 16px;
+    }    .class-profile {
+      display: grid;
+      grid-template-columns: minmax(320px, 48%) minmax(320px, 1fr);
+      gap: clamp(34px, 5vw, 78px);
+      align-items: start;
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      color: #f2f2f2;
+    }
+    .class-art img {
+      width: 100%;
+      aspect-ratio: 0.85 / 1;
+      display: block;
+      object-fit: cover;
+      object-position: var(--art-position, center);
+    }
+    .class-caption {
+      margin-top: 18px;
+      color: #d8d8d8;
+      font-size: clamp(22px, 1.8vw, 34px);
+      font-weight: 900;
+      text-align: center;
+      text-shadow: 1px 1px 0 #111, 0 0 8px rgba(255, 255, 255, 0.16);
+    }
+    .class-copy {
+      display: grid;
+      gap: clamp(42px, 5vw, 82px);
+      padding-top: clamp(8px, 1vw, 18px);
+    }
+    .class-section h2,
+    .class-section h3 {
+      margin: 0 0 clamp(18px, 2vw, 32px);
+      color: #fff;
+      font-size: clamp(42px, 4vw, 76px);
+      line-height: 1.08;
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: 0;
+      text-shadow: 1px 1px 0 #111, 0 0 10px rgba(255, 255, 255, 0.18);
+    }
+    .class-section p {
+      margin: 0;
+      color: #f2f2f2;
+      font-size: clamp(21px, 1.75vw, 34px);
+      line-height: 1.62;
+      font-weight: 900;
+      text-shadow: 1px 1px 0 #111;
+    }
+    @media (max-width: 980px) {
+      .class-profile { grid-template-columns: 1fr; }
+      .class-copy { gap: 34px; }
     }    .menu-toggle-row {
       display: flex;
       align-items: center;
@@ -297,7 +348,7 @@
       margin-top: 4px;
     }
     .submenu .submenu {
-      gap: 0;
+      gap: 14px;
       padding-left: 30px;
       margin-top: 2px;
     }
@@ -373,42 +424,13 @@
       max-width: none !important;
       margin: 0 !important;
     }
-    /* item-gallery-style */
-    .item-gallery {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-      margin-top: 18px;
-      justify-items: center;
+    /* class-page-fit: keep class detail images uncropped */
+    .class-art img {
+      aspect-ratio: 2 / 3 !important;
+      object-fit: contain !important;
+      background: #000;
     }
-    .item-gallery-card {
-      display: grid;
-      gap: 0;
-      place-items: center;
-      width: 100%;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      min-height: 0;
-    }
-    .item-gallery-card img {
-      width: min(100%, 760px);
-      height: auto;
-      max-height: none;
-      object-fit: contain;
-      display: block;
-    }
-.item-gallery-empty {
-      margin-top: 26px;
-      color: #ffc8d8 !important;
-      text-align: center;
-      font-size: clamp(20px, 1.8vw, 32px) !important;
-    }
-    @media (max-width: 680px) {
-      .item-gallery { gap: 10px; }
-      .item-gallery-card img { width: 100%; }
-    }
-</style>
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -523,17 +545,20 @@
     <main class="content">
       <section class="hero" aria-label="伺服器主視覺"><img src="img/hero.png" alt="神罰天堂"/></section>
       <section class="detail-page">
-                <div class="detail-panel">
-          <h2>【八級魔法】</h2>
-          <div class="item-gallery" aria-label="八級魔法圖片">
-            <figure class="item-gallery-card"><img src="img/item-gallery/magic-level-8/001.png" alt="02_魔法書 (治癒能量風暴)"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/magic-level-8/002.png" alt="03_魔法書 (魔法封印)"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/magic-level-8/003.png" alt="05_魔法書 (全部治癒術)"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/magic-level-8/004.png" alt="06_魔法書 (火牢)"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/magic-level-8/005.png" alt="07_魔法書 (冰雪暴)"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/magic-level-8/006.png" alt="08_魔法書 (隱身術)"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/magic-level-8/007.png" alt="09_魔法書 (返生術)"/></figure>
-            <figure class="item-gallery-card"><img src="img/item-gallery/magic-level-8/008.png" alt="09_魔法書 (震裂術)"/></figure>
+        <div class="class-profile" style="--art-position: center;">
+          <div class="class-art">
+            <img src="img/class-dragonknight.png" alt="龍騎士"/>
+            <div class="class-caption">龍騎士</div>
+          </div>
+          <div class="class-copy">
+            <section class="class-section">
+              <h2>龍騎士</h2>
+              <p>龍騎士具備強勢的近戰能力與龍之力量，能使用鎖鏈劍進行穩定輸出，兼具壓制、追擊與戰場突破能力。</p>
+            </section>
+            <section class="class-section">
+              <h3>初始點數方向</h3>
+              <p>初始能力以力量與體質為主，依照需求補足敏捷，適合喜歡高生命值、近戰壓迫與鎖鏈劍戰鬥風格的玩家。</p>
+            </section>
           </div>
         </div>
       </section>
@@ -550,10 +575,6 @@
   </script>
 </body>
 </html>
-
-
-
-
 
 
 
