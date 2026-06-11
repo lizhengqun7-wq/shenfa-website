@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>任務介紹 - 神罰天堂</title>
+  <title>黑暗精靈水晶 - 神罰天堂</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html, body { min-height: 100%; }
@@ -65,7 +65,7 @@
     .side-menu button:hover { color: #eeeeee; }
     .menu-group {
       display: grid;
-      gap: 14px;
+      gap: 0;
       position: relative;
     }
     
@@ -144,7 +144,7 @@
       }
       .server-logo { margin-bottom: 28px; }
       .side-menu { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 20px; }
-      .submenu { gap: 14px; }
+      .submenu { gap: 0; }
       .top-name { height: 54px; padding: 0 22px; }
       .hero { min-height: 320px; }
       .card-grid { grid-template-columns: 1fr; padding: 28px 24px 54px; }
@@ -245,50 +245,6 @@
     }
     .menu-toggle-row .menu-link {
       flex: 1 1 auto;
-    }    .quest-heading {
-      color: #39ff14 !important;
-      text-align: center;
-      font-size: clamp(42px, 4vw, 76px);
-      text-shadow: 0 0 10px rgba(57, 255, 20, 0.28);
-    }
-    .quest-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: clamp(18px, 2.4vw, 34px);
-    }
-    .quest-card {
-      display: grid;
-      gap: 14px;
-      border: 1px solid #242424;
-      background: #0a0a0a;
-      color: #d8d8d8;
-      text-align: center;
-      overflow: hidden;
-      text-shadow: 1px 1px 0 #111, 0 0 8px rgba(255, 255, 255, 0.12);
-    }
-    .quest-card img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      display: block;
-      filter: saturate(1.06) contrast(1.05);
-    }
-    .quest-card span {
-      display: block;
-      padding: 0 10px 18px;
-      font-size: clamp(18px, 1.35vw, 28px);
-      font-weight: 900;
-      line-height: 1.35;
-    }
-    .quest-card:hover {
-      background: #121212;
-      color: #eeeeee;
-    }
-    @media (max-width: 980px) {
-      .quest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 520px) {
-      .quest-grid { grid-template-columns: 1fr; }
     }
     /* menu-polish: left navigation hierarchy */
     .side-menu {
@@ -341,7 +297,7 @@
       margin-top: 4px;
     }
     .submenu .submenu {
-      gap: 14px;
+      gap: 0;
       padding-left: 30px;
       margin-top: 2px;
     }
@@ -417,13 +373,42 @@
       max-width: none !important;
       margin: 0 !important;
     }
-    /* quest-card-fit: keep quest card images uncropped */
-    .quest-card img {
-      aspect-ratio: 2 / 3 !important;
-      object-fit: contain !important;
-      background: #000;
+    /* item-gallery-style */
+    .item-gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 18px;
+      justify-items: center;
     }
-  </style>
+    .item-gallery-card {
+      display: grid;
+      gap: 0;
+      place-items: center;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      min-height: 0;
+    }
+    .item-gallery-card img {
+      width: min(100%, 760px);
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+      display: block;
+    }
+.item-gallery-empty {
+      margin-top: 26px;
+      color: #ffc8d8 !important;
+      text-align: center;
+      font-size: clamp(20px, 1.8vw, 32px) !important;
+    }
+    @media (max-width: 680px) {
+      .item-gallery { gap: 10px; }
+      .item-gallery-card img { width: 100%; }
+    }
+</style>
 </head>
 <body>
   <div class="layout">
@@ -511,14 +496,9 @@
     <main class="content">
       <section class="hero" aria-label="伺服器主視覺"><img src="img/hero.png" alt="神罰天堂"/></section>
       <section class="detail-page">
-        <div class="detail-panel">
-          <h2 class="quest-heading">【任務介紹】</h2>
-          <div class="quest-grid">
-            <a class="quest-card" href="quest-royal.html"><img src="img/quest-royal.png" alt="試煉任務[王族]"/><span>【試煉任務[王族]】</span></a>
-            <a class="quest-card" href="quest-knight.html"><img src="img/quest-knight.png" alt="試煉任務[騎士]"/><span>【試煉任務[騎士]】</span></a>
-            <a class="quest-card" href="quest-elf.html"><img src="img/quest-elf.png" alt="試煉任務[妖精]"/><span>【試煉任務[妖精]】</span></a>
-            <a class="quest-card" href="quest-wizard.html"><img src="img/quest-wizard.png" alt="試煉任務[法師]"/><span>【試煉任務[法師]】</span></a>
-          </div>
+                        <div class="detail-panel">
+          <h2>【黑暗精靈水晶】</h2>
+          <p>黑暗精靈水晶內容待補。</p>
         </div>
       </section>
     </main>
@@ -534,6 +514,11 @@
   </script>
 </body>
 </html>
+
+
+
+
+
 
 
 

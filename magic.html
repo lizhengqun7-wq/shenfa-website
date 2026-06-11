@@ -290,6 +290,14 @@
     @media (max-width: 520px) {
       .magic-grid { grid-template-columns: 1fr; }
     }
+
+    .magic-card.no-image {
+      min-height: 220px;
+      place-items: center;
+    }
+    .magic-card.no-image span {
+      padding: 28px 16px;
+    }
     /* menu-polish: left navigation hierarchy */
     .side-menu {
       gap: 16px;
@@ -501,35 +509,6 @@
             <a href="magic-knight-book.html">技術書(騎士)</a>
           </div>
         </div>
-        <div class="menu-group quest-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開任務介紹"></button><a class="menu-link" href="quest.html">任務介紹</a></div><div class="submenu quest-subMenu">
-            <div class="menu-group trial-royal-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開試煉任務[王族]"></button><a class="menu-link" href="quest-royal.html">試煉任務[王族]</a></div><div class="submenu trial-royal-subMenu">
-                <a href="trial-royal-15.html">15級試煉[王族]</a>
-                <a href="trial-royal-30.html">30級試煉[王族]</a>
-                <a href="trial-royal-45.html">45級試煉[王族]</a>
-              </div>
-            </div>
-            <div class="menu-group trial-knight-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開試煉任務[騎士]"></button><a class="menu-link" href="quest-knight.html">試煉任務[騎士]</a></div><div class="submenu trial-knight-subMenu">
-                <a href="trial-knight-15.html">15級試煉[騎士]</a>
-                <a href="trial-knight-30.html">30級試煉[騎士]</a>
-                <a href="trial-knight-45.html">45級試煉[騎士]</a>
-              </div>
-            </div>
-            <div class="menu-group trial-elf-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開試煉任務[妖精]"></button><a class="menu-link" href="quest-elf.html">試煉任務[妖精]</a></div><div class="submenu trial-elf-subMenu">
-                <a href="trial-elf-15.html">15級試煉[妖精]</a>
-                <a href="trial-elf-30.html">30級試煉[妖精]</a>
-                <a href="trial-elf-45.html">45級試煉[妖精]</a>
-              </div>
-            </div>
-            <div class="menu-group trial-wizard-menu"><div class="menu-toggle-row"><button class="menu-toggle" type="button" aria-expanded="false" aria-label="展開試煉任務[法師]"></button><a class="menu-link" href="quest-wizard.html">試煉任務[法師]</a></div><div class="submenu trial-wizard-subMenu">
-                <a href="trial-wizard-15-up.html">15級試煉[法師]"上"</a>
-                <a href="trial-wizard-15-down.html">15級試煉[法師]"下"</a>
-                <a href="trial-wizard-30-up.html">30級試煉[法師]"上"</a>
-                <a href="trial-wizard-30-down.html">30級試煉[法師]"下"</a>
-                <a href="trial-wizard-45.html">45級試煉[法師]</a>
-              </div>
-            </div>
-          </div>
-        </div>
         <a href="map.html">地圖介紹</a>
         <a href="doll.html">娃娃介紹</a>
         <a href="contact.html">聯繫我們</a>
@@ -545,6 +524,8 @@
             <a class="magic-card" href="magic-crystal.html"><img src="img/magic-crystal.png" alt="精靈水晶"/><span>【精靈水晶】</span></a>
             <a class="magic-card" href="magic-royal-book.html"><img src="img/magic-royal-book.png" alt="技術書(王族)"/><span>【技術書(王族)】</span></a>
             <a class="magic-card" href="magic-knight-book.html"><img src="img/magic-knight-book.png" alt="技術書(騎士)"/><span>【技術書(騎士)】</span></a>
+            <a class="magic-card no-image" href="magic-darkelf-crystal.html"><span>【黑暗精靈水晶】</span></a>
+            <a class="magic-card no-image" href="magic-dragonknight-book.html"><span>【龍騎士書板】</span></a>
           </div>
         </div>
       </section>
