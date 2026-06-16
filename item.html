@@ -287,6 +287,13 @@
     @media (max-width: 620px) {
       .item-grid { grid-template-columns: 1fr; }
     }
+    .item-card.no-image {
+      min-height: 220px;
+      place-items: center;
+    }
+    .item-card.no-image span {
+      padding: 28px 16px;
+    }
     .quest-menu,
     .side-menu a[href^="quest"],
     .side-menu a[href^="trial-"],
@@ -518,6 +525,7 @@
           <div class="item-grid">
             <a class="item-card" href="item-potion.html"><img src="img/item-potion.png" alt="藥水"/><span>【藥水】</span></a>
             <a class="item-card" href="item-scroll.html"><img src="img/item-scroll.png" alt="卷軸"/><span>【卷軸】</span></a>
+            <a class="item-card no-image" href="item-rune.html"><span>【符文】</span></a>
           </div>
         </div>
       </section>
