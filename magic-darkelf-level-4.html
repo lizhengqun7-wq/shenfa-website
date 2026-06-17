@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>鎖鏈劍 - 神罰天堂</title>
+  <title>四級魔法 - 黑暗精靈水晶 - 神罰天堂</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html, body { min-height: 100%; }
@@ -246,6 +246,12 @@
     .menu-toggle-row .menu-link {
       flex: 1 1 auto;
     }
+    .magic-extra-heading {
+      color: #39ff14 !important;
+      text-align: center;
+      font-size: clamp(42px, 4vw, 76px);
+      text-shadow: 0 0 10px rgba(57, 255, 20, 0.28);
+    }
     .quest-menu,
     .side-menu a[href^="quest"],
     .side-menu a[href^="trial-"],
@@ -414,36 +420,7 @@
       .item-gallery { gap: 10px; }
       .item-gallery-card img { width: 100%; }
     }
-    .item-stats {
-      width: 100%;
-      overflow-x: auto;
-      margin-top: 24px;
-    }
-    .item-stats-table {
-      width: 100%;
-      border-collapse: collapse;
-      color: #d8d8d8;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid #3a3a3a;
-      font-size: 16px;
-      line-height: 1.7;
-    }
-    .item-stats-table th,
-    .item-stats-table td {
-      padding: 12px 14px;
-      border-bottom: 1px solid #333;
-      text-align: left;
-      vertical-align: top;
-    }
-    .item-stats-table th {
-      color: #f0f0f0;
-      background: #242424;
-      font-weight: 900;
-    }
-    .item-stats-table tbody tr:nth-child(even) {
-      background: rgba(255,255,255,0.035);
-    }
-  </style>
+</style>
 </head>
 <body>
   <div class="layout">
@@ -541,17 +518,9 @@
     <main class="content">
       <section class="hero" aria-label="伺服器主視覺"><img src="img/hero.png" alt="神罰天堂"/></section>
       <section class="detail-page">
-                <div class="detail-panel">
-          <h2>【鎖鏈劍】</h2>
-                              <div class="item-stats" aria-label="武器能力值 — 鎖鏈劍（chainsword）">
-            <table class="item-stats-table">
-              <thead><tr><th>名稱</th><th>傷害(小/大)</th><th>能力值</th></tr></thead>
-              <tbody>
-                <tr><td>消滅者鎖鏈劍</td><td>17/13</td><td>額外命中+5、額外傷害+3</td></tr>
-                <tr><td>破滅者鎖鏈劍</td><td>21/17</td><td>額外命中+5、額外傷害+3、力量+1</td></tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="detail-panel">
+          <h2 class="magic-extra-heading">【黑暗精靈水晶 - 四級魔法】</h2>
+          <p>黑暗精靈水晶四級魔法內容待補。</p>
         </div>
       </section>
     </main>
@@ -567,8 +536,6 @@
   </script>
 </body>
 </html>
-
-
 
 
 
