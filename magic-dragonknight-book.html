@@ -252,7 +252,45 @@
       font-size: clamp(42px, 4vw, 76px);
       text-shadow: 0 0 10px rgba(57, 255, 20, 0.28);
     }
-    .quest-menu,
+    .magic-book-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(16px, 2vw, 28px);
+    }
+    .magic-book-card {
+      display: grid;
+      gap: 12px;
+      border: 1px solid #242424;
+      background: #0a0a0a;
+      color: #d8d8d8;
+      text-align: center;
+      overflow: hidden;
+      text-shadow: 1px 1px 0 #111, 0 0 8px rgba(255, 255, 255, 0.12);
+    }
+    .magic-book-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.06) contrast(1.05);
+    }
+    .magic-book-card span {
+      display: block;
+      padding: 0 8px 16px;
+      font-size: clamp(18px, 1.45vw, 30px);
+      font-weight: 900;
+      line-height: 1.35;
+    }
+    .magic-book-card:hover {
+      background: #121212;
+      color: #eeeeee;
+    }
+    @media (max-width: 900px) {
+      .magic-book-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 520px) {
+      .magic-book-grid { grid-template-columns: 1fr; }
+    }    .quest-menu,
     .side-menu a[href^="quest"],
     .side-menu a[href^="trial-"],
     .intro-card#quest {
@@ -522,10 +560,10 @@
       <section class="detail-page">
         <div class="detail-panel">
           <h2 class="magic-extra-heading">【龍騎士書板】</h2>
-          <div class="magic-grid">
-            <a class="magic-card" href="magic-dragonknight-level-1.html"><img src="img/dragon-magic-lv1.png" alt="一級魔法"/><span>【一級魔法】</span></a>
-            <a class="magic-card" href="magic-dragonknight-level-2.html"><img src="img/dragon-magic-lv2.png" alt="二級魔法"/><span>【二級魔法】</span></a>
-            <a class="magic-card" href="magic-dragonknight-level-3.html"><img src="img/dragon-magic-lv3.png" alt="三級魔法"/><span>【三級魔法】</span></a>
+          <div class="magic-book-grid">
+            <a class="magic-book-card" href="magic-dragonknight-level-1.html"><img src="img/dragon-magic-lv1.png" alt="一級魔法"/><span>【一級魔法】</span></a>
+            <a class="magic-book-card" href="magic-dragonknight-level-2.html"><img src="img/dragon-magic-lv2.png" alt="二級魔法"/><span>【二級魔法】</span></a>
+            <a class="magic-book-card" href="magic-dragonknight-level-3.html"><img src="img/dragon-magic-lv3.png" alt="三級魔法"/><span>【三級魔法】</span></a>
           </div>
         </div>
       </section>
