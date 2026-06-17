@@ -396,7 +396,42 @@
       max-width: none !important;
       margin: 0 !important;
     }
-  </style>
+      /* item-gallery-style */
+    .item-gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 18px;
+      justify-items: center;
+    }
+    .item-gallery-card {
+      display: grid;
+      gap: 0;
+      place-items: center;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      min-height: 0;
+    }
+    .item-gallery-card img {
+      width: min(100%, 760px);
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+      display: block;
+    }
+    .item-gallery-empty {
+      margin-top: 26px;
+      color: #ffc8d8 !important;
+      text-align: center;
+      font-size: clamp(20px, 1.8vw, 32px) !important;
+    }
+    @media (max-width: 680px) {
+      .item-gallery { gap: 10px; }
+      .item-gallery-card img { width: 100%; }
+    }
+
 </head>
 <body>
   <div class="layout">
@@ -498,7 +533,12 @@
       <section class="detail-page">
         <div class="detail-panel">
           <h2 class="doll-heading">【娃娃介紹】</h2>
-          <div class="coming-soon">暫未開放</div>
+          <div class="item-gallery" aria-label="娃娃介紹圖片">
+            <figure class="item-gallery-card"><img src="img/item-gallery/doll-level1/001.png" alt="娃娃介紹圖片 001"/></figure>
+            <figure class="item-gallery-card"><img src="img/item-gallery/doll-level1/002.png" alt="娃娃介紹圖片 002"/></figure>
+            <figure class="item-gallery-card"><img src="img/item-gallery/doll-level1/003.png" alt="娃娃介紹圖片 003"/></figure>
+            <figure class="item-gallery-card"><img src="img/item-gallery/doll-level1/004.png" alt="娃娃介紹圖片 004"/></figure>
+          </div>
         </div>
       </section>
     </main>
